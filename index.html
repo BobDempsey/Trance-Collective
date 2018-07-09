@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--  Required meta tags always come first  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="theme-color" content="#1565c0">
+    <link rel="icon" type="image/x-icon" href="https://bobd.me/favicon.ico" />
+    <link rel="icon" type="image/png" href="https://bobd.me/favicon.ico" sizes="any">
+    <title>Trance Collective | Bob Dempsey</title>
+    <!--  Font Awesome  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+
+</head>
+
+<!-- <body class="grey lighten-3" id="top"> -->
+
+<body class="grey lighten-3" onload="initialLoad();hideBackToTopBtn();hideFooter();" id="top">
+    <header>
+
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container smooth-scroll">
+                <a class="navbar-brand" href="#">
+                    <strong>Trance Collective - Bob Dempsey</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                    <ul class="navbar-nav ml-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://bobd.me/">
+                                    <i class="fa fa-arrow-left"></i> BobD.Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://bobd.me/portfolio">
+                                    <i class="fa fa-th"></i> Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="http://eepurl.com/dnxxUL" target="_blank">
+                                    <i class="fa fa-bell"></i> Subscribe</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://bobd.me/contact">
+                                    <i class="fa fa-envelope"></i> Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://bobd.me/contact">
+                                    <i class="fa fa-info-circle"></i>
+                                </a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </nav> -->
+
+
+        <!--Jumbotron-->
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card card-image" style="background-image: url(/img/heroBG-min.jpg);">
+                    <div class="text-white text-center rgba-black-strong py-5 px-4" id="hero">
+                        <a class="fa fa-info-circle white-text info" data-toggle="modal" data-target="#infoModal"></a>
+                        </a>
+                        <div class="py-4 smooth-scroll">
+                            <!--Content-->
+                            <h6 class="white-text">
+                                <i class="fa fa-headphones mr-1">
+                                </i> Bob Dempsey
+                            </h6>
+                            <h1 class="card-title pt-3 mb-4 font-weight-bold display-5">Trance Collective</h1>
+                            <h5 class="font-weight-normal px-3 pb-4 ">The Best in Uplifting, Emotional, Orchestral, and Progressive Trance</h5>
+                            <!--  -->
+
+
+
+                            <a class="btn blue-gradient button" href="#tracks">
+                                <i class="fa fa-music left"></i> Latest Tracks</a>
+
+                        </div>
+                    </div>
+                </div>
+                <span id="tracks"></span>
+            </div>
+        </div>
+        <!--Jumbotron-->
+
+    </header>
+
+    <!-- Main Layout -->
+    <main>
+
+        <div class="container smooth-scroll">
+
+            <!-- Section: Team v.3 -->
+            <section id="team" class="section team-section pb-4 wow fadeIn" data-wow-delay="0.3s">
+
+                <!-- Section heading -->
+                <h2 class="font-weight-bold h2 my-5">Latest Tracks</h2>
+
+                <!-- Output row -->
+                <div id="outputTarget"></div>
+                <div id="btnContainer">
+                </div>
+            </section>
+            <!-- Section: Team v.3 -->
+        </div>
+
+        <div class="fixed-action-btn smooth-scroll" style="bottom: 50px; right: 24px;">
+            <a href="#top" class="btn-floating btn-large blue darken-3">
+                <i class="fa fa-arrow-up"></i>
+            </a>
+        </div>
+
+        <!-- indo modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">About This Web App
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>This web app uses the YouTube data API to fetch playlist videos. The UI is built with CSS Grid, Boostrap
+                            4, & Material Design (MDBootstrap). Also used is ES6 Fetch & jQuery.</p>
+                        <p>Thank you so much for visiting!
+                            <i class="far fa-smile-wink"></i>
+
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-js-square"></i>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- info modal -->
+
+    </main>
+    <!-- Main Layout -->
+
+    <!-- Footer -->
+    <footer class="page-footer mt-4 elegant-color-dark text-center text-md-left">
+
+        <!-- Copyright -->
+        <div class="footer-copyright py-3 text-center">
+            <div class="container-fluid">
+                &copy; 2018 |
+                <a href="https://bobd.me"> BobD.me</a>
+            </div>
+        </div>
+        <!-- Copyright -->
+
+
+    </footer>
+    <!-- Footer -->
+
+
+
+    <!--  SCRIPTS  -->
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <!-- <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script> -->
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+    <!-- Main App JS -->
+    <script type="text/javascript" src="../js/main.js"></script>
+</body>
+
+</html>
